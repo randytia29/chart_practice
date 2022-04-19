@@ -1,4 +1,4 @@
-import 'package:chart_practice/line_chart_widget.dart';
+import 'package:chart_practice/bar_chart_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,14 +28,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final double barWidth = 22;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('FL Line Chart'),
       ),
-      body: const Center(
-        child: LineChartWidget(),
+      body: Center(
+        child: BarChartWidget(barWidth: barWidth),
       ),
     );
   }
